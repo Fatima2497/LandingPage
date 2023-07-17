@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function TermsPage() {
   return (
     <>
-      <h4 className="text-center text-3xl font-bold  bg-[#F6F6FF]">Terms & Conditions</h4>
+      <h4 className="text-center text-3xl font-bold  bg-[#F6F6FF]">Terms &amp; Conditions</h4>
       <p className="text-center text-xs bg-[#F6F6FF]">
         Home <span>&gt;</span> Blog List
       </p>

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function PrivacyPage() {
   return (
     <>
-      <h4 className="text-center text-3xl font-bold  bg-[#F6F6FF]">Privacy & Policy</h4>
+      <h4 className="text-center text-3xl font-bold  bg-[#F6F6FF]">Privacy &amp; Policy</h4>
       <p className="text-center text-xs bg-[#F6F6FF]">
         Home <span>&gt;</span> Blog List
       </p>
