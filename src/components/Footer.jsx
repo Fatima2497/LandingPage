@@ -53,7 +53,7 @@ const Footer = () => {
       <div className="p-5 mt-7 w-full ">
         <hr />
         <div className="flex md:justify-between items-center justify-start mt-2">
-          <p className="text-xs hidden md:visible">© 2023 ZySoftec, All rights reserved.</p>
+          <p className="text-xs invisible md:visible">&copy; 2023 ZySoftec, All rights reserved.</p>
           <p className="text-xs">Design & Developed By <span className="text-[#16349F]">ZySoftec</span></p>
         </div>
       </div>
