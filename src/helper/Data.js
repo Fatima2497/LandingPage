@@ -19,6 +19,6 @@ export const data = [
     image: "/assets/images/wix.png",
   },
   {
-    image: "/assets/images/desiging.png",
+    image: "/assets/images/itemDesign.png",
   },
 ];
