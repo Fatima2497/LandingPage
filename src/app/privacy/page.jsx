@@ -20,7 +20,7 @@ export default function PrivacyPage() {
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
+            culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <p className="text-xs tracking-tighter mt-5">
             But I must explain to you how all this mistaken idea of denouncing
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
           <li>Required by the law</li>
           <li>Required by third party services</li>
           <li>Increases Transparency</li>
-          <li>Let's take a look at each of these reasons in more depth.</li>
+          <li>Lets take a look at each of these reasons in more depth.</li>
         </ul>
         <h2 className="text-black font-bold text-md tracking-tighter mt-3 ms-2">
           What we collect
@@ -91,7 +91,7 @@ export default function PrivacyPage() {
           happiness. No one rejects, dislikes, or avoids pleasure itself,
           because it is pleasure, but because those who do not know how to
           pursue pleasure rationally encounter consequences that are extremely
-          painful.t is pleasure, but because those who do not know how to pursue
+          painful.It is pleasure, but because those who do not know how to pursue
           pleasure rationally encounter consequences that are extremely
           painful.actual teachings of the great explorer of the truth, the
           master-builder of human happiness.
