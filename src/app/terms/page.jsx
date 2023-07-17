@@ -39,7 +39,7 @@ export default function TermsPage() {
           <li>Required by the law</li>
           <li>Required by third party services</li>
           <li>Increases Transparency</li>
-          <li>Let's take a look at each of these reasons in more depth.</li>
+          <li>Lets take a look at each of these reasons in more depth.</li>
         </ul>
         <h2 className="text-black font-bold text-md tracking-tighter mt-3 ms-2">
         To Set Liabilities Limits
@@ -47,23 +47,23 @@ export default function TermsPage() {
         <p className="text-xs tracking-tighter ms-2">
           But I must explain to you how all this mistaken idea of denouncing
           pleasure and praising pain was born and I will give you a complete
-          account of the system, and expound the actual teachings of the great
-          explorer of the truth, the master-builder of human happiness. No one
-          rejects, dislikes, or avoids pleasure itself, because it is pleasure,
+          account of the system and expound the actual teachings of the great
+          explorer of the truth the master-builder of human happiness. No one
+          rejects dislikes or avoids pleasure itself because it is pleasure,
           but because those who do not know how to pursue pleasure rationally
           encounter consequences that are extremely painful.
         </p>
         <p className="text-xs tracking-tighter mt-5 ms-2">
           But I must explain to you how all this mistaken idea of denouncing
           pleasure and praising pain was born and I will give you a complete
-          account of the system, and expound the actual teachings of the great
-          explorer of the truth, the master-builder of human happiness. No one
-          rejects, dislikes, or avoids pleasure itself, because it is pleasure,
+          account of the system and expound the actual teachings of the great
+          explorer of the truth the master builder of human happiness. No one
+          rejects dislikes or avoids pleasure itself, because it is pleasure
           but because those who do not know how to pursue pleasure rationally
           encounter consequences that are extremely painful.actual teachings of
           the great explorer of the truth, the master-builder of human
-          happiness. No one rejects, dislikes, or avoids pleasure itself,
-          because it is pleasure, but because those who do not know how to
+          happiness. No one rejects dislikes or avoids pleasure itself
+          because it is pleasure but because those who do not know how to
           pursue pleasure rationally encounter consequences that are extremely
           painful.
         </p>
@@ -82,22 +82,22 @@ export default function TermsPage() {
         <p className="text-xs tracking-tighter mt-5 ms-2">
           But I must explain to you how all this mistaken idea of denouncing
           pleasure and praising pain was born and I will give you a complete
-          account of the system, and expound the actual teachings of the great
-          explorer of the truth, the master-builder of human happiness. No one
-          rejects, dislikes, or avoids pleasure itself, because it is pleasure,
+          account of the system and expound the actual teachings of the great
+          explorer of the truth the master-builder of human happiness. No one
+          rejects dislikes or avoids pleasure itself because it is pleasure
           but because those who do not know how to pursue pleasure rationally
           encounter consequences that are extremely painful.actual teachings of
-          the great explorer of the truth, the master-builder of human
-          happiness. No one rejects, dislikes, or avoids pleasure itself,
-          because it is pleasure, but because those who do not know how to
+          the great explorer of the truth the master builder of human
+          happiness. No one rejects dislikes or avoids pleasure itself
+          because it is pleasure but because those who do not know how to
           pursue pleasure rationally encounter consequences that are extremely
-          painful.t is pleasure, but because those who do not know how to pursue
+          painful.t is pleasure but because those who do not know how to pursue
           pleasure rationally encounter consequences that are extremely
-          painful.actual teachings of the great explorer of the truth, the
+          painful.actual teachings of the great explorer of the truth the
           master-builder of human happiness.
         </p>
         <p className="text-xs tracking-tighter mt-5 ms-2">
-          No one rejects, dislikes, or avoids pleasure itself, because it is
+          No one rejects, dislikes or avoids pleasure itself because it is
           pleasure, but because those who do not know how to pursue pleasure
           rationally encounter consequences that are extremely painful.t is
           pleasure, but because those who do not know how to pursue pleasure
