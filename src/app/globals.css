@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+
+
+.btn{
+  padding: 9px;
+  border-radius: 25px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  background-image: linear-gradient(to right,#9F37F0 , #3C1B65);
+}
+h3{
+  color: #3C1B65;
+}
+h2{
+  color: #FB1D87;
+}
+h6{
+  color: #3C1B65;
+} */
+

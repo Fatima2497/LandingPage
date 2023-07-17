@@ -1,0 +1,29 @@
+export const blog = [
+    {
+        image:'/assets/images/rect1.png',
+    },
+    {
+        image:'/assets/images/rect2.png',
+    },
+    {
+        image:'/assets/images/rect3.png',
+    },
+    {
+        image:'/assets/images/blog.png',
+    },
+    {
+        image:'/assets/images/blog1.png',
+    },
+    {
+        image:'/assets/images/blog2.png',
+    },
+    {
+        image:'/assets/images/blog3.png',
+    },
+    {
+        image:'/assets/images/blog4.png',
+    },
+    {
+        image:'/assets/images/blog5.png',
+    },
+]
