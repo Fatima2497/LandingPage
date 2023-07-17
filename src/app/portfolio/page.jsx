@@ -6,7 +6,9 @@ import { blog } from "@/helper/Blog";
 export default function PortfolioPage() {
   return (
     <>
-      <h4 className="text-center text-3xl font-bold   bg-[#F6F6FF]">Portfolio</h4>
+      <h4 className="text-center text-3xl font-bold   bg-[#F6F6FF]">
+        Portfolio
+      </h4>
       <p className="text-center text-xs  bg-[#F6F6FF]">
         Home <span>&gt;</span> Portfolio
       </p>
@@ -32,6 +34,7 @@ export default function PortfolioPage() {
         <div className="md:grid md:gap-4 md:grid-cols-3 md:place-content-center flex flex-col items-center">
           <div className="h-auto mt-7 rounded ">
             <Image
+              className="w-full"
               src="/assets/images/54.png"
               alt="project"
               width={300}
@@ -40,6 +43,7 @@ export default function PortfolioPage() {
           </div>
           <div className="h-auto mt-7 rounded ">
             <Image
+              className="w-full"
               src="/assets/images/57.png"
               alt="project"
               width={300}
@@ -49,7 +53,7 @@ export default function PortfolioPage() {
           <div className="h-auto mt-7 rounded w">
             {" "}
             <Image
-            className=""
+              className="w-full"
               src="/assets/images/56.png"
               alt="project"
               width={500}
@@ -58,6 +62,7 @@ export default function PortfolioPage() {
           </div>
           <div className="h-auto mt-7  rounded ">
             <Image
+              className="w-full"
               src="/assets/images/58.png"
               alt="project"
               width={300}
@@ -67,6 +72,7 @@ export default function PortfolioPage() {
           <div className="h-auto mt-7 rounded ">
             {" "}
             <Image
+              className="w-full"
               src="/assets/images/60.png"
               alt="project"
               width={300}
@@ -76,6 +82,7 @@ export default function PortfolioPage() {
           <div className="h-auto mt-7 rounded ">
             {" "}
             <Image
+              className="w-full"
               src="/assets/images/61.png"
               alt="project"
               width={300}
@@ -84,6 +91,7 @@ export default function PortfolioPage() {
           </div>
           <div className="h-auto mt-7  rounded ">
             <Image
+              className="w-full"
               src="/assets/images/62.png"
               alt="project"
               width={300}
@@ -93,6 +101,7 @@ export default function PortfolioPage() {
           <div className="h-auto mt-7 rounded w-50 h-50 ">
             {" "}
             <Image
+              className="w-full"
               src="/assets/images/64.png"
               alt="project"
               width={300}
@@ -102,6 +111,7 @@ export default function PortfolioPage() {
           <div className="h-auto mt-7 rounded w-50 h-50 ">
             {" "}
             <Image
+              className="w-full"
               src="/assets/images/65.png"
               alt="project"
               width={300}
@@ -110,8 +120,8 @@ export default function PortfolioPage() {
           </div>
         </div>
         <div className="flex items-center justify-center mt-5">
-        <div className="bg-[#e9a1c4] text-xs text-md p-1 text-center ms-2 w-7 h-7 rounded">
-        &#x2190;
+          <div className="bg-[#e9a1c4] text-xs text-md p-1 text-center ms-2 w-7 h-7 rounded">
+            &#x2190;
           </div>
           <div className="bg-[#e9a1c4] text-xs text-md p-1 text-center ms-2 w-7 h-7 rounded">
             1
@@ -123,7 +133,7 @@ export default function PortfolioPage() {
             3
           </div>
           <div className="bg-[#e9a1c4] text-xs text-md p-1 text-center ms-2 w-7 h-7 rounded">
-          &#x2192;
+            &#x2192;
           </div>
         </div>
       </section>

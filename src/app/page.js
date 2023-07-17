@@ -572,22 +572,24 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <section className="bg-[#FffFFF] h-auto flex flex-col w-full items-center ">
+        <section className="bg-[#FffFFF] h-auto flex flex-col w-full items-center mt-10">
           <h3 className="text-center font-bold text-2xl">
             Course <span className="text-[#FB1D87]">We Offer</span>
           </h3>
-          <p className="text-center text-sm">
+          <p className="md:text-center text-center text-xs">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.sit amet, consectetu dolor sit ame
           </p>
-          <div className="flex flex-cols md:gap-5 md:grid md:grid-cols-3 mt-10 ms-7">
+          <div className="flex flex-col md:gap-2 md:grid md:grid-cols-3 mt-10 ms-7">
             {course.map((i, j) => {
               return (
                 <div
-                  className="  h-auto bg-white rounded shadow-md"
+                  className="  h-auto bg-white rounded shadow-md mt-4"
                   key={j}
                 >
-                  <Image src={i.image} alt="12" width={330} height={300} />
+                  <Image 
+                  className="w-full"
+                  src={i.image} alt="12" width={330} height={300} />
                   <div className="flex items-center justify-center  ms-0 p-5 mt-3">
                     <button className="w-30 h-30 rounded-full p-1 text-white bg-[#3C1B65]">
                       {i.title}
@@ -652,7 +654,7 @@ export default function Home() {
               );
             })}
           </div>
-        </section> */}
+        </section>
 
         <section className="bg-[#FffFFF] h-auto flex flex-col  w-full items-center p-8 ">
           <h3 className="font-bold font-7xl capitalize mt-10 text-[#3C1B65] text-center">
@@ -755,6 +757,7 @@ export default function Home() {
           <div className="flex flex-col md:grid md:grid-cols-3 gap-2 items-center">
             <div className="h-auto bg-white rounded shadow-lg">
               <Image
+              className="w-full"
                 src="/assets/images/rect1.png"
                 alt="12"
                 width={330}
@@ -815,6 +818,7 @@ export default function Home() {
 
             <div className="h-auto bg-white rounded shadow-lg">
               <Image
+              className="w-full"
                 src="/assets/images/rect2.png"
                 alt="12"
                 width={330}
@@ -874,6 +878,7 @@ export default function Home() {
             </div>
             <div className="h-auto bg-white rounded shadow-lg">
               <Image
+              className="w-full"
                 src="/assets/images/rect3.png"
                 alt="12"
                 width={330}
@@ -934,12 +939,26 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-[#FffFFF] h-auto flex flex-col w-full items-end p-16 bg-cover bg-center bg-[url(/assets/images/bg22.png)]">
-        <div className=" md:me-32 md:ms-30 me:24 ms-24">
-    <h3 className="text-white text-3xl font-bold text-center ">Colaboration With</h3>
-    <Image src='/assets/images/logo2.png' alt='logo' width={200} height={200} />
-    </div>
-          
+        <section className="bg-[#FffFFF] h-auto w-full flex items-center justify-center p-10 bg-cover bg-center bg-[url(/assets/images/bg22.png)]">
+          <div className="">
+          <Image
+              src="/assets/images/white.png"
+              alt="logo"
+              width={200}
+              height={200}
+            />
+          </div>
+          <div className="flex flex-col ms-5">
+            <h3 className="text-white text-3xl font-bold text-center">
+              Colaboration With
+            </h3>
+            <Image
+              src="/assets/images/logo2.png"
+              alt="logo"
+              width={200}
+              height={200}
+            />
+          </div>
         </section>
       </div>
     </>

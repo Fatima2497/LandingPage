@@ -24,7 +24,7 @@ const Navbar = () => {
           height={50}
         />
       </div>
-      <ul className="md:flex hidden me-2">
+      <ul className="md:flex hidden ">
         <li className="mx-[10px] cursor-pointer active:text-[#FB1D87]">
           <Link href="/">Home</Link>
         </li>
@@ -43,10 +43,11 @@ const Navbar = () => {
         <li className="mx-[10px] cursor-pointer active:text-[#FB1D87]">
           <Link href="/blog">Blog</Link>
         </li>
-        <button className="bg-gradient-to-r  from-[#9F37F0] to-[#3C1B65] text-white text-xs rounded-full p-2">
-          Contact Us
-        </button>
+        
       </ul>
+      <button className="bg-gradient-to-r  from-[#9F37F0] to-[#3C1B65] text-white text-xs rounded-full p-4">
+        Contact Us
+      </button>
 
       <div className="md:hidden">
         <button
