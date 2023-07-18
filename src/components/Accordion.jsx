@@ -1,6 +1,8 @@
 "use client"
 import React from 'react'
 import { useState } from 'react';
+import {AiOutlinePlus} from 'react-icons/ai'
+import {MdOutlineKeyboardArrowUp} from 'react-icons/md'
 
 const Accordion = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,18 +12,18 @@ const Accordion = ({ title, content }) => {
   };
 
   return (
-    <div className="border rounded p-1 mb-4">
+    <div className="w-full border-2 rounded mb-4 border-b-2 ">
       <button
-        className="flex justify-between items-center w-full p-2 font-semibold"
+        className="flex justify-between items-center w-full p-2 tracking-tighter border-b-2 font-semibold"
         onClick={toggleAccordion}
       >
-        <span className='text-[#FB1D87] text-xs border-b-2'>{title}</span>
-        <span className={`border-b-2 transition-transform duration-300 transform ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
-         +
+        <span className='text-[#FB1D87] text-xs  tracking-tighter'>{title}</span>
+        <span className='text-base'>
+         {isOpen ? <MdOutlineKeyboardArrowUp className='text-[#FB1D87] text-base'/> : <AiOutlinePlus />}
         </span>
       </button>
-      <div className={`${isOpen ? 'block' : 'hidden'} p-2`}>
-        <p className=' text-xs'>{content}</p>
+      <div className={`${isOpen ? 'block' : 'hidden'} text-xs`}>
+        <p className='tracking-tighter text-xs p-2'>{content}</p>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import './globals.css'
 import { DM_Sans } from 'next/font/google'
 import Footer from '@/components/Footer'
 
-const inter = DM_Sans({ 
+const dmSan = DM_Sans({ 
   weight: ['400','500','700'],
   subsets: ['latin'] 
 })
@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#FFFFFF] min-w-full flex flex-col min-h-full`}>
+      <body className={`${dmSan.className} bg-[#FFFFFF] min-w-full flex flex-col min-h-full`}>
         <Navbar />
         <main className='flex-grow'>{children}</main>
         <Footer />

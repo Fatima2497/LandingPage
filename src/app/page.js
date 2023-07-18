@@ -1,9 +1,30 @@
+"use client";
 import Image from "next/image";
 import { data } from "@/helper/Data";
 import { course } from "@/helper/Course";
 import Accordion from "@/components/Accordion";
-import { AiFillQuestionCircle } from "react-icons/ai";
+import {
+  AiFillQuestionCircle,
+  AiOutlinePlus,
+  AiOutlineMinus,
+} from "react-icons/ai";
+import { useState } from "react";
+import { Nunito_Sans } from "next/font/google";
+import { workTitle } from "@/helper/Wrok";
+
+const nunitosans = Nunito_Sans({ 
+  weight: ['300','400','500','700'],
+  subsets: ['latin'] 
+})
+
+
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <div className="min-w-full min-h-full grid justify-items-center">
@@ -38,7 +59,7 @@ export default function Home() {
         </section>
 
         {/* service section */}
-        <section className="bg-[#FFFFFF] mt-3 h-auto flex flex-col w-full items-center p-8 ">
+        <section className={`bg-[#FFFFFF] mt-3 h-auto flex flex-col w-full items-center p-8 ${nunitosans.className}`}>
           <h3 className="font-bold font-5xl capitalize">services</h3>
           <p className="text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
@@ -86,7 +107,7 @@ export default function Home() {
                   height={400}
                 />
                 <div className="flex justify-center items-center absolute inset-0  mb-24 md:mb-26">
-                  <div className="bg-[#FB1D87] even:bg-[] rounded-full p-3">
+                  <div className="bg-[#FB1D87] even:bg-[#9F37F0] rounded-full p-3">
                     <Image
                       src="/assets/images/app.png"
                       alt="service"
@@ -120,7 +141,7 @@ export default function Home() {
                 <div className="flex justify-center items-center absolute inset-0  mb-24 md:mb-26">
                   <div className="bg-[#FB1D87] even:bg-[#9F37F0] rounded-full p-3">
                     <Image
-                      src="/assets/images/web.png"
+                      src="/assets/images/graphic.png"
                       alt="service"
                       width={40}
                       height={40}
@@ -129,7 +150,7 @@ export default function Home() {
                 </div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center mt-7 md:mt-12">
                   <h6 className="text-base md:tracking-tighter  font-bold mt-10 whitespace-nowrap md:mt-4">
-                    Web Development
+                    Graphic Designing
                   </h6>
                   <p className="text-xs text-[#000000] w-70 tracking-tighter">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -150,9 +171,9 @@ export default function Home() {
                   height={400}
                 />
                 <div className="flex justify-center items-center absolute inset-0  mb-24 md:mb-26">
-                  <div className="bg-[#FB1D87] even:bg-[] rounded-full p-3">
+                  <div className="bg-[#FB1D87] even:bg-[#9F37F0] rounded-full p-3">
                     <Image
-                      src="/assets/images/web.png"
+                      src="/assets/images/ux.png"
                       alt="service"
                       width={40}
                       height={40}
@@ -161,7 +182,7 @@ export default function Home() {
                 </div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center mt-7 md:mt-12">
                   <h6 className="text-base md:tracking-tighter  font-bold mt-10 whitespace-nowrap md:mt-4">
-                    Web Development
+                    UI UX Design
                   </h6>
                   <p className="text-xs text-[#000000] w-70 tracking-tighter">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -182,9 +203,9 @@ export default function Home() {
                   height={400}
                 />
                 <div className="flex justify-center items-center absolute inset-0  mb-24 md:mb-26">
-                  <div className="bg-[#FB1D87] even:bg-[] rounded-full p-3">
+                  <div className="bg-[#FB1D87] even:bg-[#9F37F0]  rounded-full p-3">
                     <Image
-                      src="/assets/images/web.png"
+                      src="/assets/images/game.png"
                       alt="service"
                       width={40}
                       height={40}
@@ -193,7 +214,7 @@ export default function Home() {
                 </div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center mt-7 md:mt-12">
                   <h6 className="text-base md:tracking-tighter  font-bold mt-10 whitespace-nowrap md:mt-4">
-                    Web Development
+                    Game Development
                   </h6>
                   <p className="text-xs text-[#000000] w-70 tracking-tighter">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -214,9 +235,9 @@ export default function Home() {
                   height={400}
                 />
                 <div className="flex justify-center items-center absolute inset-0  mb-24 md:mb-26">
-                  <div className="bg-[#FB1D87] even:bg-[] rounded-full p-3">
+                  <div className="bg-[#FB1D87] even:bg-[#9F37F0]  rounded-full p-3">
                     <Image
-                      src="/assets/images/web.png"
+                      src="/assets/images/film.png"
                       alt="service"
                       width={40}
                       height={40}
@@ -225,7 +246,7 @@ export default function Home() {
                 </div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center mt-7 md:mt-12">
                   <h6 className="text-base md:tracking-tighter  font-bold mt-10 whitespace-nowrap md:mt-4">
-                    Web Development
+                    Video Editing
                   </h6>
                   <p className="text-xs text-[#000000] w-70 tracking-tighter">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -246,9 +267,9 @@ export default function Home() {
                   height={400}
                 />
                 <div className="flex justify-center items-center absolute inset-0  mb-24 md:mb-26">
-                  <div className="bg-[#FB1D87] even:bg-[] rounded-full p-3">
+                  <div className="bg-[#FB1D87] even:bg-[#9F37F0]  rounded-full p-3">
                     <Image
-                      src="/assets/images/web.png"
+                      src="/assets/images/seo.png"
                       alt="service"
                       width={40}
                       height={40}
@@ -257,7 +278,7 @@ export default function Home() {
                 </div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center mt-7 md:mt-12">
                   <h6 className="text-base md:tracking-tighter  font-bold mt-10 whitespace-nowrap md:mt-4">
-                    Web Development
+                    SEO
                   </h6>
                   <p className="text-xs text-[#000000] w-70 tracking-tighter">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -278,9 +299,9 @@ export default function Home() {
                   height={400}
                 />
                 <div className="flex justify-center items-center absolute inset-0  mb-24 md:mb-26">
-                  <div className="bg-[#FB1D87] even:bg-[] rounded-full p-3">
+                  <div className="bg-[#FB1D87] even:bg-[#9F37F0]  rounded-full p-3">
                     <Image
-                      src="/assets/images/web.png"
+                      src="/assets/images/social-media.png"
                       alt="service"
                       width={40}
                       height={40}
@@ -289,7 +310,7 @@ export default function Home() {
                 </div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center mt-7 md:mt-12">
                   <h6 className="text-base md:tracking-tighter  font-bold mt-10 whitespace-nowrap md:mt-4">
-                    Web Development
+                    Digital Marketing
                   </h6>
                   <p className="text-xs text-[#000000] w-70 tracking-tighter">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -364,8 +385,8 @@ export default function Home() {
                 src={i.image}
                 key={j}
                 alt="service"
-                width={600}
-                height={600}
+                width={300}
+                height={300}
               />
             );
           })}
@@ -436,188 +457,90 @@ export default function Home() {
               />
             </button>
           </div>
-          <div className="text-center mt-6">
+          <div className={`text-center mt-6 ${nunitosans.className}`}>
             <h3 className="font-bold text-2xl capitalize">
               Work <span className="text-[#FB1D87]">Process</span>
             </h3>
             <p>Here are the steps to complete your basic package project.</p>
             <div className="md:grid  md:grid-cols-3 md:place-items-center mt-4 ms-7 flex flex-col">
-              <div className="mt-5 text-white flex items-center">
-                <div className="bg-[#FB1D87] p-2 rounded-full h-8 w-8 items-center justify-center text-base text-white">
-                  1
+              {
+                workTitle.map((i,j)=>{
+                  return(
+                    <div className="mt-5 text-white flex items-center justify-center" key={j}>
+                <div className="relative">
+                <Image 
+                src='/assets/images/numcircle.png' alt='subtractshape' width={60} height={60} />
+                <p className="absolute text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">{i.sno}</p>
                 </div>
-                <div className="h-30 w-60 shadow-xl bg-white rounded-sm ms-3 p-3">
-                  <h3 className="text-base font-bold text-[#3C1B65]">
-                    Video Meetup
-                  </h3>
-                  <p className="text-sm text-justify text-black">
+                <div className="relative">
+                <Image src='/assets/images/Subtract.png' alt='subtractshape' width={300} height={300} />
+                <h3 className="text-sm font-bold text-[#3C1B65] absolute top-[30%] left-[30%] -translate-x-[30%] -translate-y-[30%]">{i.title}</h3>
+                <p className="text-xs absolute top-[50%] left-[40%] -translate-x-[30%] -translate-y-[40%] text-justify tracking-tighter text-black">
                     we will meet up by a call to discuss your project face to
                     face.
                   </p>
                 </div>
+              
               </div>
-              <div className="mt-5 text-white flex items-center">
-                <div className="bg-[#FB1D87] p-2 rounded-full h-8 w-8 items-center justify-center text-base text-white">
-                  4
-                </div>
-                <div className="h-30 w-60 shadow-xl bg-white rounded-sm ms-3 p-3">
-                  <h3 className="text-base font-bold text-[#3C1B65]">
-                    Progress Check
-                  </h3>
-                  <p className="text-sm text-justify text-black">
-                    we will meet up by a call to discuss your project face to
-                    face.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-5 text-white flex items-center">
-                <div className="bg-[#FB1D87] p-2 rounded-full h-8 w-8 items-center justify-center text-base text-white">
-                  7
-                </div>
-                <div className="h-30 w-60 shadow-xl bg-white rounded-sm ms-3 p-3">
-                  <h3 className="text-base font-bold text-[#3C1B65]">
-                    Content Upload
-                  </h3>
-                  <p className="text-sm text-justify text-black">
-                    we will meet up by a call to discuss your project face to
-                    face.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-5 text-white flex items-center">
-                <div className="bg-[#FB1D87] p-2 rounded-full h-8 w-8 items-center justify-center text-base text-white">
-                  2
-                </div>
-                <div className="h-30 w-60 shadow-xl bg-white rounded-sm ms-3 p-3">
-                  <h3 className="text-base font-bold text-[#3C1B65]">
-                    Requirement
-                  </h3>
-                  <p className="text-sm text-justify text-black">
-                    we will meet up by a call to discuss your project face to
-                    face.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-5 text-white flex items-center">
-                <div className="bg-[#FB1D87] p-2 rounded-full h-8 w-8 items-center justify-center text-base text-white">
-                  5
-                </div>
-                <div className="h-30 w-60 shadow-xl bg-white rounded-sm ms-3 p-3">
-                  <h3 className="text-base font-bold text-[#3C1B65]">
-                    Design Concept
-                  </h3>
-                  <p className="text-sm text-justify text-black">
-                    we will meet up by a call to discuss your project face to
-                    face.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-5 text-white flex items-center">
-                <div className="bg-[#FB1D87] p-2 rounded-full h-8 w-8 items-center justify-center text-base text-white">
-                  8
-                </div>
-                <div className="h-30 w-60 shadow-xl bg-white rounded-sm ms-3 p-3">
-                  <h3 className="text-base font-bold text-[#3C1B65]">
-                    Final Review
-                  </h3>
-                  <p className="text-sm text-justify text-black">
-                    we will meet up by a call to discuss your project face to
-                    face.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-5 text-white flex items-center">
-                <div className="bg-[#FB1D87] p-2 rounded-full h-8 w-8 items-center justify-center text-base text-white">
-                  3
-                </div>
-                <div className="h-30 w-60 shadow-xl bg-white rounded-sm ms-3 p-3">
-                  <h3 className="text-base font-bold text-[#3C1B65]">
-                    Research
-                  </h3>
-                  <p className="text-sm text-justify text-black">
-                    we will meet up by a call to discuss your project face to
-                    face.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-5 text-white flex items-center">
-                <div className="bg-[#FB1D87] p-2 rounded-full h-8 w-8 items-center justify-center text-base text-white">
-                  6
-                </div>
-                <div className="h-30 w-60 shadow-xl bg-white rounded-sm ms-3 p-3">
-                  <h3 className="text-base font-bold text-[#3C1B65]">
-                    Development
-                  </h3>
-                  <p className="text-sm text-justify text-black">
-                    we will meet up by a call to discuss your project face to
-                    face.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-5 text-white flex items-center">
-                <div className="bg-[#FB1D87] p-2 rounded-full h-8 w-8 items-center justify-center text-base text-white">
-                  9
-                </div>
-                <div className="h-30 w-60 shadow-xl bg-white rounded-sm ms-3 p-3">
-                  <h3 className="text-base font-bold text-[#3C1B65]">
-                    Delivery
-                  </h3>
-                  <p className="text-sm text-justify text-black">
-                    we will meet up by a call to discuss your project face to
-                    face.
-                  </p>
-                </div>
-              </div>
+                  )
+                })
+              }
+         
             </div>
           </div>
         </section>
 
-        <section className="bg-[#FffFFF] h-auto flex flex-col w-full items-center mt-10">
-          <h3 className="text-center font-bold text-2xl">
-            Course <span className="text-[#FB1D87]">We Offer</span>
+          {/* cOURSES */}
+        <section className="bg-[#F6F6FF] h-auto flex flex-col w-full items-center mt-10 p-8">
+          <h3 className="text-center font-bold text-2xl tracking-tighter text-[#3C1B65]">
+            Courses <span className="text-[#FB1D87]">We Offer</span>
           </h3>
-          <p className="md:text-center text-center text-xs">
+          <p className="md:text-center text-center text-xs tracking-tighter">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.sit amet, consectetu dolor sit ame
           </p>
-          <div className="flex flex-col md:gap-2 md:grid md:grid-cols-3 mt-10 ms-7">
+          <div className="flex flex-col md:gap-2 md:grid md:grid-cols-3 mt-6 ms-7">
             {course.map((i, j) => {
               return (
                 <div
-                  className="  h-auto bg-white rounded shadow-md mt-4"
+                  className={`h-auto bg-white rounded shadow-md mt-4 w-56 ${nunitosans.className}`}
                   key={j}
                 >
-                  <Image 
-                  className="w-full"
-                  src={i.image} alt="12" width={330} height={300} />
-                  <div className="flex items-center justify-center  ms-0 p-5 mt-3">
-                    <button className="w-30 h-30 rounded-full p-1 text-white bg-[#3C1B65]">
+                  <Image
+                    className="w-full"
+                    src={i.image}
+                    alt="12"
+                    width={300}
+                    height={300}
+                  />
+                  <div className="flex items-center justify-between  ms-0 p-2 mt-3">
+                    <button className="rounded-full w-44 p-2 text-xs text-white whitespace-nowrap bg-gradient-to-r from-[#9732D4] to-[#3C1B65]">
                       {i.title}
                     </button>
-                    <p className="ms-4 text-[#3C1B65] text-sm">$ 130.00</p>
+                    <p className="text-[#9732D4] text-xs whitespace-nowrap ms-2">$ 130.00</p>
                   </div>
                   <div className="mx-0 my-0 p-2">
-                    <h5 className="font-bold">{i.title}</h5>
-                    <p className="">
+                    <h5 className="font-bold text-xs">{i.title}</h5>
+                    <p className="text-xs tracking-tighter">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod.
                     </p>
                   </div>
-                  <div className="p-4 flex items-center justify-evenly">
-                    <div className="">
+                  <div className="p-2 flex items-center justify-between">
+                    <div className="flex items-center justify-center">
                       <Image
                         src="/assets/images/pers1.png"
                         alt="12"
-                        width={50}
-                        height={50}
+                        width={30}
+                        height={30}
                       />
+                      <div className="ms-2">
+                      <p className="text-xs text-[#777777]">Instructor</p>
+                      <h5 className="text-xs whitespace-nowrap font-bold tracking-tighter">James Willians</h5>
                     </div>
-                    <div className="ms-2">
-                      <p>Instructor</p>
-                      <h5>James Willians</h5>
-                    </div>
+                      </div>
                     <div className="ms-1">
-                      <p>
+                      <p className="text-xs text-[#777777]">
                         <Image
                           className="inline"
                           src="/assets/images/star.png"
@@ -647,7 +570,7 @@ export default function Home() {
                           height={10}
                         />
                       </p>
-                      <p className="text-sm">4.7 Rating</p>
+                      <p className="text-xs text-[#777777]">4.7 Rating</p>
                     </div>
                   </div>
                 </div>
@@ -656,77 +579,77 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-[#FffFFF] h-auto flex flex-col  w-full items-center p-8 ">
-          <h3 className="font-bold font-7xl capitalize mt-10 text-[#3C1B65] text-center">
+        <section className={`bg-[#FffFFF] h-auto flex flex-col  w-full items-center p-8 ${nunitosans.className}`}>
+          <h3 className="font-bold text-2xl tracking-tighter capitalize mt-10 text-[#3C1B65] text-center">
             Meet <span className="text-[#FB1D87]">Our Expert Team</span> Works
             For Your Business
           </h3>
-          <p className="text-center">
+          <p className="text-center tracking-tighter text-xs">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.sit amet, consectetu dolor sit ame
           </p>
-          <div className="flex flex-col items-center md:grid md:grid-cols-4 md:place-content-center mt-3">
+          <div className={`flex flex-col items-center md:grid md:grid-cols-4 md:place-content-center mt-3 ${nunitosans.className}`}>
             <div className="bg-white h-auto">
               <Image
                 src="/assets/images/shan.png"
                 alt="shan"
-                width={500}
-                height={500}
+                width={300}
+                height={300}
               />
-              <h5 className="text-center">Shanemadar Khan</h5>
-              <p className="text-center">Co-Founder</p>
+              <h5 className="text-center text-sm font-bold tracking-tighter">Shanemadar Khan</h5>
+              <p className="text-center text-xs tracking-tighter">Co-Founder</p>
             </div>
             <div className="bg-white h-auto">
               <Image
                 src="/assets/images/huma.png"
                 alt="huma"
-                width={500}
-                height={500}
+                width={300}
+                height={300}
               />
-              <h5 className="text-center">Zill E Huma</h5>
-              <p className="text-center">Technical lead developer</p>
+              <h5 className="text-center text-sm font-bold tracking-tighter">Zill E Huma</h5>
+              <p className="text-center text-xs tracking-tighter">Technical lead developer</p>
             </div>
             <div className="bg-white h-auto">
               <Image
                 src="/assets/images/khan.png"
                 alt="khan"
-                width={500}
-                height={500}
+                width={300}
+                height={300}
               />
-              <h5 className="text-center">Sahim Khan</h5>
-              <p className="text-center">Digital Marketing Expert</p>
+              <h5 className="text-center text-sm font-bold tracking-tighter">Sahim Khan</h5>
+              <p className="text-center text-xs tracking-tighter">Digital Marketing Expert</p>
             </div>
             <div className="bg-white h-auto">
               <Image
                 src="/assets/images/poonam.png"
                 alt="poonam"
-                width={500}
-                height={500}
+                width={300}
+                height={300}
               />
-              <h5 className="text-center"> Poonam Kushwaha</h5>
-              <p className="text-center">Graphic Designer</p>
+              <h5 className="text-center text-sm font-bold tracking-tighter"> Poonam Kushwaha</h5>
+              <p className="text-center text-xs tracking-tighter">Graphic Designer</p>
             </div>
           </div>
         </section>
 
-        <section className="bg-[#FffFFF] h-auto flex flex-col md:flex-row md:justify-between  w-full items-center p-8 ">
+        <section className="bg-[#FffFFF] h-auto flex flex-col md:flex-row md:justify-between  w-full items-center gap-4 p-6">
           <div className="flex flex-col md:block">
-            <h3 className="font-bold text-2xl capitalize mt-10 text-[#3C1B65] text-center md:whitespace-nowrap mb-4">
+            <h3 className="font-bold text-2xl capitalize text-[#3C1B65] text-center md:whitespace-nowrap ">
               Frequently Asked{" "}
               <span className="text-[#FB1D87]"> Questions</span>
             </h3>
-            <button className="rounded-full p-2 bg-[#E5E1FA] w-full mt-2 text-center">
+            <button className="rounded-full p-2 mt-8 bg-[#E5E1FA] w-full  text-center">
               {" "}
               General Questions
             </button>
-            <button className="rounded-full p-2 text-white bg-[#9F37F0] w-full mt-2">
+            <button className="rounded-full p-2  text-white bg-[#9F37F0] w-full mt-2">
               Community
             </button>
-            <button className="rounded-full p-2 bg-[#E5E1FA] w-full mt-2">
+            <button className="rounded-full p-2  bg-[#E5E1FA] w-full mt-2">
               Support
             </button>
           </div>
-          <div>
+          <div className="mt-[50px]">
             <Image
               src="/assets/images/businesswoman.png"
               alt="shan"
@@ -734,58 +657,69 @@ export default function Home() {
               height={300}
             />
           </div>
-          <div className="bg-white mt-3 p-3 h-100 w-full ">
-            <Accordion
-              title="How to create project in developmentagency?"
-              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.sit amet, consectetu dolor sit ame,Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.sit amet, consectetu dolor sit ame"
-            />
-            <Accordion
-              title="How to create project in developmentagency?"
-              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.sit amet, consectetu dolor sit ame,Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.sit amet, consectetu dolor sit ame"
-            />
-            <Accordion
-              title="How to create project in developmentagency?"
-              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.sit amet, consectetu dolor sit ame,Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.sit amet, consectetu dolor sit ame"
-            />
+          <div className="w-full">
+            <div className="w-full shadow-md mt-6 rounded-full p-2 bg-white ">
+              <button
+                className="ms-2 flex justify-between items-center w-full text-xs text-center font-semibold"
+                onClick={toggleAccordion}
+              >
+                is this Full Digital Agency{" "}
+                <AiOutlinePlus className="me-4 text-[#9732D4] text-sm font-bold" />
+              </button>
+            </div>
+            <div
+              className={`${
+                isOpen ? "block" : "hidden"
+              } p-4 mt-2 bg-white rounded-[43px] text-white shadow-lg`}
+            >
+              <button
+                className="ms-2 flex justify-between items-center w-full text-xs text-center  text-black font-semibold"
+                onClick={toggleAccordion}
+              >
+                is this Full Digital Agency{" "}
+                <AiOutlineMinus className="me-4 text-[#9732D4] text-sm font-bold" />
+              </button>
+              <p className=" text-base text-[#777777] mt-3 ms-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt.sit amet, consectetu dolor sit
+                ame,Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt.sit amet, consectetu dolor sit ame
+              </p>
+            </div>
           </div>
         </section>
 
-        <section className="bg-[#FffFFF] h-auto flex flex-col w-full items-center p-6 ">
-          <h3 className="font-bold text-2xl capitalize mt-10 text-[#3C1B65] text-center md:whitespace-nowrap mb-4">
+        {/* Blogs */}
+        <section className="bg-[#FffFFF] h-auto flex flex-col w-full items-center p-2 ">
+          <h3 className="font-bold tracking-tighter text-2xl capitalize mt-10 text-[#3C1B65] text-center md:whitespace-nowrap mb-4">
             Our Latest <span className="text-[#FB1D87]"> Blogs</span>
           </h3>
-          <div className="flex flex-col md:grid md:grid-cols-3 gap-2 items-center">
-            <div className="h-auto bg-white rounded shadow-lg">
+          <p className="text-xs tracking-tighter text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.sit amet, consectetu dolor sit ame</p>
+          <div className="flex flex-col md:grid md:grid-cols-3 gap-2 items-center mt-4">
+            <div className="h-auto bg-white rounded shadow-lg w-56">
               <Image
-              className="w-full"
+                className="w-full"
                 src="/assets/images/rect1.png"
                 alt="12"
-                width={330}
+                width={300}
                 height={300}
               />
-              <div className="flex items-center justify-center ms-0 p-5 mt-3">
-                <button className="w-30 h-30 rounded-full p-1 text-white bg-[#3C1B65]">
+              <div className="flex items-center justify-center ms-0 p-2 mt-3">
+                <button className="w-44 p-1 text-xs rounded-lg text-white whitespace-nowrap bg-[#9732D4]">
                   Web Development
                 </button>
-                <p className="ms-4 text-[#3C1B65] text-xs">12 may 2023</p>
+                <p className=" text-[#3C1B65] text-xs whitespace-nowrap">12 may 2023</p>
               </div>
-              <div className="mx-0 my-0 p-2">
-                <h5 className="font-bold"></h5>
-                <p className="">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod.
+              <div className="mt-2 p-2">
+                <p className="text-xs font-bold">
+                  Lorem ipsum dolor sit amet, consectetur
                 </p>
-              </div>
-              <div className="p-4 flex items-center justify-evenly">
-                <div className="ms-2 text-xs">
-                  <p>
+                <p className="text-xs mt-2 tracking-tighter">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod.
-                  </p>
-                </div>
-              </div>
-              <div className="ms-1 mb-4 flex justify-between items-center">
-                <div className="ms-4">
+                </p>
+                <div className="mt-3 flex justify-between items-center">
+                <div className="">
                   <p className="text-xs">
                     <Image
                       className="inline"
@@ -814,39 +748,33 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+              </div>
+             
             </div>
-
-            <div className="h-auto bg-white rounded shadow-lg">
+            <div className="h-auto bg-white rounded shadow-lg w-56">
               <Image
-              className="w-full"
+                className="w-full"
                 src="/assets/images/rect2.png"
                 alt="12"
-                width={330}
+                width={300}
                 height={300}
               />
-              <div className="flex items-center justify-center ms-0 p-5 mt-3">
-                <button className="w-30 h-30 rounded-full p-1 text-white bg-[#3C1B65]">
+              <div className="flex items-center justify-center ms-0 p-2 mt-3">
+                <button className="w-44 p-1 text-xs rounded-lg text-white whitespace-nowrap bg-[#9732D4]">
                   Web Development
                 </button>
-                <p className="ms-4 text-[#3C1B65] text-xs">12 may 2023</p>
+                <p className=" text-[#3C1B65] text-xs whitespace-nowrap">12 may 2023</p>
               </div>
-              <div className="mx-0 my-0 p-2">
-                <h5 className="font-bold"></h5>
-                <p className="">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod.
+              <div className="mt-2 p-2">
+                <p className="text-xs font-bold">
+                  Lorem ipsum dolor sit amet, consectetur
                 </p>
-              </div>
-              <div className="p-4 flex items-center justify-evenly">
-                <div className="ms-2 text-xs">
-                  <p>
+                <p className="text-xs mt-2 tracking-tighter">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod.
-                  </p>
-                </div>
-              </div>
-              <div className="ms-1 mb-4 flex justify-between items-center">
-                <div className="ms-4">
+                </p>
+                <div className="mt-3 flex justify-between items-center">
+                <div className="">
                   <p className="text-xs">
                     <Image
                       className="inline"
@@ -875,38 +803,33 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+              </div>
+             
             </div>
-            <div className="h-auto bg-white rounded shadow-lg">
+            <div className="h-auto bg-white rounded shadow-lg w-56">
               <Image
-              className="w-full"
+                className="w-full"
                 src="/assets/images/rect3.png"
                 alt="12"
-                width={330}
+                width={300}
                 height={300}
               />
-              <div className="flex items-center justify-center ms-0 p-5 mt-3">
-                <button className="w-30 h-30 rounded-full p-1 text-white bg-[#3C1B65]">
+              <div className="flex items-center justify-center ms-0 p-2 mt-3">
+                <button className="w-44 p-1 text-xs rounded-lg text-white whitespace-nowrap bg-[#9732D4]">
                   Web Development
                 </button>
-                <p className="ms-4 text-[#3C1B65] text-xs">12 may 2023</p>
+                <p className=" text-[#3C1B65] text-xs whitespace-nowrap">12 may 2023</p>
               </div>
-              <div className="mx-0 my-0 p-2">
-                <h5 className="font-bold"></h5>
-                <p className="">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod.
+              <div className="mt-2 p-2">
+                <p className="text-xs font-bold">
+                  Lorem ipsum dolor sit amet, consectetur
                 </p>
-              </div>
-              <div className="p-4 flex items-center justify-evenly">
-                <div className="ms-2 text-xs">
-                  <p>
+                <p className="text-xs mt-2 tracking-tighter">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod.
-                  </p>
-                </div>
-              </div>
-              <div className="ms-1 mb-4 flex justify-between items-center">
-                <div className="ms-4">
+                </p>
+                <div className="mt-3 flex justify-between items-center">
+                <div className="">
                   <p className="text-xs">
                     <Image
                       className="inline"
@@ -935,13 +858,16 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+              </div>
+             
             </div>
           </div>
         </section>
 
-        <section className="bg-[#FffFFF] h-auto w-full flex items-center justify-center p-10 bg-cover bg-center bg-[url(/assets/images/bg22.png)]">
+        {/* Collaboration */}
+        <section className="bg-[#FffFFF] h-auto w-full mt-5 flex items-center justify-center p-8 bg-cover bg-center bg-[url(/assets/images/bg22.png)]">
           <div className="">
-          <Image
+            <Image
               src="/assets/images/white.png"
               alt="logo"
               width={200}
